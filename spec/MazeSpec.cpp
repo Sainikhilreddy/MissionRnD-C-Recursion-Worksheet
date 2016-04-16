@@ -51,6 +51,7 @@ namespace spec
 			m = 0, n = 4;
 			x1 = 0, y1 = 0, x2 = 2, y2 = 2;
 			Assert::AreEqual(0, path_exists((int*)maze, m, n, x1, y1, x2, y2), L"Error at Invalid Size", 1, 2);
+			Assert::AreEqual(0, path_exists((int*)maze, m, n, x1, y1, x2, y2), L"Error at Invalid Size", 1, 2);
 
 			m = 0, n = -4;
 			x1 = 0, y1 = 0, x2 = 2, y2 = 2;
@@ -140,11 +141,11 @@ namespace spec
 			int maze[3][5] = {
 				{ 1, 0, 0, 0, 1 },
 				{ 1, 1, 0, 1, 1 },
-				{ 0, 1, 1, 1, 0 }
+				{ 0, 1, 1, 1, 1 }
 			};
 
 			int m = 3, n = 5;
-			int x1 = 0, y1 = 0, x2 = 0, y2 = 4;
+			int x1 = 0, y1 = 0, x2 = 2, y2 = 4;
 			Assert::AreEqual(1, path_exists((int*)maze, m, n, x1, y1, x2, y2), L"Error for 3x5 Maze", 1, 2);
 
 
